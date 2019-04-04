@@ -18,15 +18,15 @@ var query = process.argv[3]
     
     axios.get(`http://www.omdbapi.com/?t=${query}&y=&plot=short&apikey=trilogy`)
     .then(function(response) {
-      console.log(`The movie's rating is:${response.data.Title}`);
-      console.log(`The movie's rating is:${response.data.Year}`);
+      console.log(`The movie's Title is:${response.data.Title}`);
+      console.log(`The movie's Year is:${response.data.Year}`);
      
         console.log(`The movie's rating is:${response.data.imdbRating}`);
         console.log(`The movie's rating is:${response.data.Ratings[1].value}`);
-        console.log(`The movie's rating is:${response.data.Country}`);
-        console.log(`The movie's rating is:${response.data.Language}`);
-        console.log(`The movie's rating is:${response.data.Plot}`);
-        console.log(`The movie's rating is:${response.data.Actors}`);
+        console.log(`The Country:${response.data.Country}`);
+        console.log(`TheLanguages are:${response.data.Language}`);
+        console.log(`The Plot:${response.data.Plot}`);
+        console.log(`The Actors:${response.data.Actors}`);
       })
       .then(function (response) {
         console.log(response);
